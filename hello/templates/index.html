@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block meta %}
+<style>
+code {
+  border-radius: 3px;
+  padding: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+}
+ol li code {
+  color:blue;
+}
+li{
+  margin-top:5px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Welcome to Django-Starter.</h1><hr>
+  <div class="container">
+    <strong>Replace <code>django-starter</code> with the name of <code>your app</code> using "Find in Project" or manually from the following files:</strong><br><br>
+    <ul>
+      <li><code>settings.py</code> - <code>LINE 43</code>: ROOT_URLCONF = 'django-starter.urls'</li>
+      <li><code>settings.py</code> - <code>LINE 62</code>: WSGI_APPLICATION = 'django-starter.wsgi.application'</li>
+      <li><code>wsgi.py</code> - <code>LINE 11</code>: os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django-starter.settings")</li>
+      <li><code>manage.py</code> - <code>LINE 6</code>: os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django-starter.settings")</li>
+      <li><code>Procfile</code> - <code>LINE 1</code>: web: gunicorn django-starter.wsgi --log-file -</li>
+    </ul>
+    <hr>
+    <ol>
+      <li>Create new app using <code>$ python manage.py startapp &lt;app-name&gt;</code></li>
+      <li><code>cd &lt;app-name&gt; && mkdir static && mkdir templates</code></li>
+      <li>And on you go. (Don't forget to add it to your <code>settings.py</code> - <code>INSTALLED_APPS</code>)</li>
+    </ol>
+  </div>
+
+</div>
+{% endblock %}
