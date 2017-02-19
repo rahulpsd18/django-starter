@@ -16,6 +16,8 @@ SECRET_KEY = 'change+this*at^any+cost(4m&+g1@u@=8s@axc41ml*f=5(s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -106,9 +108,6 @@ DATABASES['default'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
